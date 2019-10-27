@@ -16,7 +16,7 @@ django-filter = "*"
 djangorestframework = "*"
 django-htmlmin = "*"
 pyyaml = "*"
-ujson = "*"
+
 ### Database driver
 psycopg2-binary = "*"
 ### WSGI

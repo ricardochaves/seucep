@@ -172,5 +172,6 @@ REST_FRAMEWORK = {
         "rest_framework.renderers.BrowsableAPIRenderer",
         "seucep.apps.drf.renders.yaml.yaml_render.YAMLRenderer",
         "seucep.apps.drf.renders.piped.piped_render.PipedRenderer",
+        "seucep.apps.drf.renders.xml.xml_render.XmlRenderer",
     ],
 }

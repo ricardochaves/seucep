@@ -152,6 +152,32 @@
     </div>
 
 
+
+        <div class="section">
+        <div class="container">
+            <h2 class="display-5">Formato XML </h2>
+
+            <p>Para receber a como um XML basta usar <code>Accept: application/xml</code> para formatar
+                a saída</p>
+
+            <figure>
+                <pre class="bg-light">
+                    <code>
+
+        curl http://0.0.0.0:5005/api/v1/ceps/27185000/ --header 'accept: application/xml'
+
+<textarea rows="1" cols="300" style="border:none;" class="bg-light">
+
+        <Address addresses="asdf" state="RJ" complement="Rua Das Hortênsias 50, Arrozal" cep="27185000" neighborhood="None" city="Piraí"/>
+</textarea>
+                    </code>
+                </pre>
+            </figure>
+
+
+        </div>
+    </div>
+
 </div>
 
 

@@ -5,7 +5,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: DockerfileTest2
+      dockerfile: DockerfileTest
     ports:
       - "${DJANGO_BIND_PORT}:${DJANGO_BIND_PORT}"
     env_file: .env
@@ -15,7 +15,7 @@ services:
       - db
     command: ["./wait-for-it.sh", "${DB_HOST}:${DB_PORT}", "-t", "120", "--", "./start.sh"]
   integration-tests:
-    image: python:3.7.4-slim
+    image: python:3.7.4-stretch
     env_file: .env
     volumes:
       - .:/web

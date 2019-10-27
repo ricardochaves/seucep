@@ -1,4 +1,4 @@
-FROM python:3.7.4-slim-stretch
+FROM python:3.7.4-stretch
 
 WORKDIR /web
 

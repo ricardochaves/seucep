@@ -163,3 +163,14 @@ REQUEST_ID_CONFIG = {
     "GENERATE_REQUEST_ID_IF_NOT_FOUND": True,
     "RESPONSE_HEADER_REQUEST_ID": "HTTP_X_REQUEST_ID",
 }
+
+
+REST_FRAMEWORK = {
+    "DEFAULT_PARSER_CLASSES": ("rest_framework.parsers.JSONParser", "rest_framework.parsers.FormParser"),
+    "DEFAULT_RENDERER_CLASSES": [
+        "rest_framework.renderers.JSONRenderer",
+        "rest_framework.renderers.BrowsableAPIRenderer",
+        "seucep.apps.drf.renders.yaml.yaml_render.YAMLRenderer",
+        "seucep.apps.drf.renders.piped.piped_render.PipedRenderer",
+    ],
+}

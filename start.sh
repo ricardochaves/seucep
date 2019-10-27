@@ -2,6 +2,7 @@
 
 python manage.py makemigrations
 python manage.py migrate
+python manage.py loaddata data.json
 
 if [[ ${DJANGO_BIND_ADDRESS+x} ]] && [[ ${DJANGO_BIND_PORT+x} ]];
 then

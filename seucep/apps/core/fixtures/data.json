@@ -1,0 +1,31 @@
+[
+  {
+    "model": "core.addresses",
+    "pk": "27185000",
+    "fields": {
+      "addresses": "asdf",
+      "state": "RJ",
+      "complement": "Rua Das Hort\u00eansias 50, Arrozal",
+      "neighborhood": null,
+      "city": "Pira\u00ed"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$180000$rQ2lOoN3ddBV$Q6P14CqrywdD7Y2jGdFe0e5sNyiMHkdDd4banZPXZAQ=",
+      "last_login": "2019-10-27T14:41:50.146Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-10-27T14:41:36.927Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

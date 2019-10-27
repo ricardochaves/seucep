@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import include
 from django.urls import path
 from rest_framework import routers
+from seucep.apps.core import views
 from seucep.apps.drf.views import AddressesBaseViewSet
 
 router = routers.DefaultRouter()
 router.register("ceps", AddressesBaseViewSet, base_name="RetailStoreOwnerViewSet")
 
 urlpatterns = [
+    path("", views.index, name="index"),
     path("admin/", admin.site.urls),
     path("healthcheck/", include("health_check.urls")),
     path("api/v1/", include(router.urls)),

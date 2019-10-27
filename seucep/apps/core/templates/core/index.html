@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Seu CEP</h1>
+            <p class="lead">API aberta e totalmente grátis para consulta de CEP.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <h2 class="display-5"> Portal</h2>
+
+            <p>Acesse o link <a href="http://0.0.0.0:5005/api/v1/ceps/" rel="nofollow" target="_blank">http://0.0.0.0:5005/api/v1/ceps/</a>
+            </p>
+
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <h2 class="display-5">Exemplo com CURL </h2>
+
+            <p>A maneira mais simples é essa, ele já vai retornar um <code>Content-Type: application/json</code></p>
+            <figure>
+                <pre class="bg-light">
+                    <code>
+
+        curl http://0.0.0.0:5005/api/v1/ceps/27185000/
+
+        {"addresses":"asdf","state":"RJ","complement":"Rua Das Hortênsias 50, Arrozal","cep":"27185000","neighborhood":null,"city":"Piraí"}
+
+                    </code>
+                </pre>
+            </figure>
+
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <h2 class="display-5">Exemplo com JS (fetch) </h2>
+            <figure>
+                <pre class="bg-light">
+                    <code>
+
+        const response = await fetch("http://0.0.0.0:5005/api/v1/ceps/27185000/")
+        const myJson = await response.json();
+        console.log(JSON.stringify(myJson));
+
+        {"addresses":"asdf","state":"RJ","complement":"Rua Das Hortênsias 50, Arrozal","cep":"27185000","neighborhood":null,"city":"Piraí"}
+
+                    </code>
+                </pre>
+            </figure>
+        </div>
+
+    </div>
+
+
+    <div class="section">
+        <div class="container">
+            <h2 class="display-5">Opções </h2>
+
+            <p>Você pode formatar a saída usando o header <code>Accept: application/json; indent=4</code> para formatar
+                a saída</p>
+
+            <figure>
+                <pre class="bg-light">
+                    <code>
+
+        curl http://0.0.0.0:5005/api/v1/ceps/27185000/ --header 'accept: application/json; indent=4'
+
+        {
+            "addresses": "asdf",
+            "state": "RJ",
+            "complement": "Rua Das Hortênsias 50, Arrozal",
+            "cep": "27185000",
+            "neighborhood": null,
+            "city": "Piraí"
+        }
+                    </code>
+                </pre>
+            </figure>
+
+
+        </div>
+    </div>
+
+
+        <div class="section">
+        <div class="container">
+            <h2 class="display-5">Formato YAML </h2>
+
+            <p>Para receber a saída no formato yaml basta usar <code>Accept: application/yaml</code> para formatar
+                a saída</p>
+
+            <figure>
+                <pre class="bg-light">
+                    <code>
+
+        curl http://0.0.0.0:5005/api/v1/ceps/27185000/ --header 'accept: application/yaml'
+
+        addresses: asdf
+        cep: '27185000'
+        city: Piraí
+        complement: Rua Das Hortênsias 50, Arrozal
+        neighborhood: null
+        state: RJ
+                    </code>
+                </pre>
+            </figure>
+
+
+        </div>
+    </div>
+
+
+
+
+        <div class="section">
+        <div class="container">
+            <h2 class="display-5">Formato Piped </h2>
+
+            <p>Para receber a como um pipe basta usar <code>Accept: text/piped</code> para formatar
+                a saída</p>
+
+            <figure>
+                <pre class="bg-light">
+                    <code>
+
+        curl http://0.0.0.0:5005/api/v1/ceps/27185000/ --header 'accept: text/piped'
+
+        addresses:asdf|state:RJ|complement:Rua Das Hortênsias 50, Arrozal|cep:27185000|neighborhood:None|city:Piraí
+
+                    </code>
+                </pre>
+            </figure>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

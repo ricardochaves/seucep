@@ -14,6 +14,9 @@ django = "*"
 django-health-check = "*"
 django-filter = "*"
 djangorestframework = "*"
+django-htmlmin = "*"
+pyyaml = "*"
+
 ### Database driver
 psycopg2-binary = "*"
 ### WSGI

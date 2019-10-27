@@ -7,5 +7,3 @@ from seucep.apps.drf.serializers import AddressesSerializer
 class AddressesBaseViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Addresses.objects.all()
     serializer_class = AddressesSerializer
-    filter_backends = (DjangoFilterBackend,)
-    filter_fields = ("cep",)

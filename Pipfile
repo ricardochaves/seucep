@@ -1,0 +1,32 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+coverage = "*"
+pytest-cov = "*"
+pytest-django = "*"
+codacy-coverage = "*"
+
+[packages]
+django = "*"
+django-health-check = "*"
+django-filter = "*"
+djangorestframework = "*"
+### Database driver
+psycopg2-binary = "*"
+### WSGI
+gunicorn = "*"
+gevent = "*"
+### Logging
+python-json-logger = "*"
+request-id-django-log = "*"
+
+
+[requires]
+python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
+

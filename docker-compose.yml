@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  db:
+    image: postgres:10.1-alpine
+  web:
+    build:
+      context: .
+      dockerfile: DockerfileTest2
+    ports:
+      - "${DJANGO_BIND_PORT}:${DJANGO_BIND_PORT}"
+    env_file: .env
+    volumes:
+      - .:/web
+    depends_on:
+      - db
+    command: ["./wait-for-it.sh", "${DB_HOST}:${DB_PORT}", "-t", "120", "--", "./start.sh"]
+  integration-tests:
+    image: python:3.7.4-slim
+    env_file: .env
+    volumes:
+      - .:/web
+    depends_on:
+      - db
+    command: >
+      sh -c "pip install tox && cd web && tox && find . -name '*.pyc' -delete && rm -rf .tox"

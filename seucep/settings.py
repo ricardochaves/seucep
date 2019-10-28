@@ -175,3 +175,6 @@ REST_FRAMEWORK = {
         "seucep.apps.drf.renders.xml.xml_render.XmlRenderer",
     ],
 }
+
+DEFAULT_FILE_STORAGE = os.getenv("DEFAULT_FILE_STORAGE")
+GS_BUCKET_NAME = os.getenv("GS_BUCKET_NAME")

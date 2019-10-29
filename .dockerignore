@@ -4,6 +4,7 @@
 
 junit
 node_modules
+/static
 
 ### Django ###
 *.log

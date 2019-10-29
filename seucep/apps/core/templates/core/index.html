@@ -21,7 +21,7 @@
         <div class="container">
             <h2 class="display-5"> Portal</h2>
 
-            <p>Acesse o link <a href="http://0.0.0.0:5005/api/v1/ceps/" rel="nofollow" target="_blank">http://0.0.0.0:5005/api/v1/ceps/</a>
+            <p>Acesse o link <a href="https://seucep.com.br/api/v1/ceps/" rel="nofollow" target="_blank">https://seucep.com.br/api/v1/ceps/</a>
             </p>
 
         </div>
@@ -35,7 +35,7 @@
                 <pre class="bg-light">
                     <code>
 
-        curl http://0.0.0.0:5005/api/v1/ceps/27185000/
+        curl https://seucep.com.br/api/v1/ceps/27185000/
 
         {"addresses":"asdf","state":"RJ","complement":"Rua Das Hortênsias 50, Arrozal","cep":"27185000","neighborhood":null,"city":"Piraí"}
 
@@ -54,7 +54,7 @@
                 <pre class="bg-light">
                     <code>
 
-        const response = await fetch("http://0.0.0.0:5005/api/v1/ceps/27185000/")
+        const response = await fetch("https://seucep.com.br/api/v1/ceps/27185000/")
         const myJson = await response.json();
         console.log(JSON.stringify(myJson));
 
@@ -79,7 +79,7 @@
                 <pre class="bg-light">
                     <code>
 
-        curl http://0.0.0.0:5005/api/v1/ceps/27185000/ --header 'accept: application/json; indent=4'
+        curl https://seucep.com.br/api/v1/ceps/27185000/ --header 'accept: application/json; indent=4'
 
         {
             "addresses": "asdf",
@@ -98,7 +98,7 @@
     </div>
 
 
-        <div class="section">
+    <div class="section">
         <div class="container">
             <h2 class="display-5">Formato YAML </h2>
 
@@ -109,7 +109,7 @@
                 <pre class="bg-light">
                     <code>
 
-        curl http://0.0.0.0:5005/api/v1/ceps/27185000/ --header 'accept: application/yaml'
+        curl https://seucep.com.br/api/v1/ceps/27185000/ --header 'accept: application/yaml'
 
         addresses: asdf
         cep: '27185000'
@@ -126,9 +126,7 @@
     </div>
 
 
-
-
-        <div class="section">
+    <div class="section">
         <div class="container">
             <h2 class="display-5">Formato Piped </h2>
 
@@ -139,7 +137,7 @@
                 <pre class="bg-light">
                     <code>
 
-        curl http://0.0.0.0:5005/api/v1/ceps/27185000/ --header 'accept: text/piped'
+        curl https://seucep.com.br/api/v1/ceps/27185000/ --header 'accept: text/piped'
 
         addresses:asdf|state:RJ|complement:Rua Das Hortênsias 50, Arrozal|cep:27185000|neighborhood:None|city:Piraí
 
@@ -152,8 +150,7 @@
     </div>
 
 
-
-        <div class="section">
+    <div class="section">
         <div class="container">
             <h2 class="display-5">Formato XML </h2>
 
@@ -164,11 +161,12 @@
                 <pre class="bg-light">
                     <code>
 
-        curl http://0.0.0.0:5005/api/v1/ceps/27185000/ --header 'accept: application/xml'
+        curl https://seucep.com.br/api/v1/ceps/27185000/ --header 'accept: application/xml'
 
 <textarea rows="1" cols="300" style="border:none;" class="bg-light">
 
-        <Address addresses="asdf" state="RJ" complement="Rua Das Hortênsias 50, Arrozal" cep="27185000" neighborhood="None" city="Piraí"/>
+        <Address addresses="asdf" state="RJ" complement="Rua Das Hortênsias 50, Arrozal" cep="27185000"
+                 neighborhood="None" city="Piraí"/>
 </textarea>
                     </code>
                 </pre>
@@ -178,6 +176,25 @@
         </div>
     </div>
 
+</div>
+
+
+<div class="section">
+        <div class="container d-flex h-100 flex-column">
+            <div class="flex-grow-1"></div>
+            <div class="row justify-content-center">
+                <div class="col-3">
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick"/>
+                        <input type="hidden" name="hosted_button_id" value="HYJ8E4X3KURKA"/>
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0"
+                               name="submit" title="PayPal - The safer, easier way to pay online!"
+                               alt="Donate with PayPal button"/>
+                        <img alt="" border="0" src="https://www.paypal.com/en_BR/i/scr/pixel.gif" width="1" height="1"/>
+                    </form>
+                </div>
+            </div>
+    </div>
 </div>
 
 

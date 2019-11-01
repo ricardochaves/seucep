@@ -1,13 +1,20 @@
 [
   {
-    "model": "core.addresses",
-    "pk": "27185000",
+    "model": "core.address",
+    "pk": "05586001",
     "fields": {
-      "addresses": "asdf",
-      "state": "RJ",
-      "complement": "Rua Das Hort\u00eansias 50, Arrozal",
-      "neighborhood": null,
-      "city": "Pira\u00ed"
+        "log_nu":"596530",
+        "loc_nu":"9668",
+        "bairro_nu_ini":"26795",
+        "bairro_nu_fim":null,
+        "address_type":"Rua",
+        "log_sta_tlo":true,
+        "abbreviation":"R Iquiririm",
+        "state":"SP",
+        "addresses":"Iquiririm",
+        "complement":"- de 0501/502 ao fim",
+        "neighborhood":"Vila Indiana",
+        "city":"São Paulo"
     }
   },
   {

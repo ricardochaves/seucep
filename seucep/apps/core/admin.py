@@ -1,7 +1,7 @@
 from django.contrib import admin
-from seucep.apps.core.models import Addresses
+from seucep.apps.core.models import Address
 
 
-@admin.register(Addresses)
+@admin.register(Address)
 class AddressesAdmin(admin.ModelAdmin):
     pass

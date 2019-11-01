@@ -18,10 +18,10 @@ from django.urls import include
 from django.urls import path
 from rest_framework import routers
 from seucep.apps.core import views
-from seucep.apps.drf.views import AddressesBaseViewSet
+from seucep.apps.drf.views import AddressBaseViewSet
 
 router = routers.DefaultRouter()
-router.register("ceps", AddressesBaseViewSet, base_name="RetailStoreOwnerViewSet")
+router.register("ceps", AddressBaseViewSet, base_name="RetailStoreOwnerViewSet")
 
 urlpatterns = [
     path("", views.index, name="index"),

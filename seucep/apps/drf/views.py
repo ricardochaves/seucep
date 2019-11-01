@@ -1,9 +1,9 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
-from seucep.apps.core.models import Addresses
-from seucep.apps.drf.serializers import AddressesSerializer
+from seucep.apps.core.models import Address
+from seucep.apps.drf.serializers import AddressSerializer
 
 
-class AddressesBaseViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Addresses.objects.all()
-    serializer_class = AddressesSerializer
+class AddressBaseViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Address.objects.all()
+    serializer_class = AddressSerializer

@@ -176,6 +176,7 @@ REST_FRAMEWORK = {
         "seucep.apps.drf.renders.xml.xml_render.XmlRenderer",
     ],
     "PAGE_SIZE": 100,
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
 }
 
 DEFAULT_FILE_STORAGE = os.getenv("DEFAULT_FILE_STORAGE")

@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from seucep.apps.core.models import Addresses
+from seucep.apps.core.models import Address
 
 
-class AddressesSerializer(serializers.ModelSerializer):
+class AddressSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Addresses
-        fields = ("addresses", "state", "complement", "cep", "neighborhood", "city")
+        model = Address
+        fields = ("addresses", "state", "complement", "cep", "neighborhood", "city", "abbreviation", "address_type")

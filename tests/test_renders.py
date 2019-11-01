@@ -1,7 +1,7 @@
 from django.test import Client
 from django.test import TestCase
 from django.test import override_settings
-from seucep.apps.core.models import Addresses
+from seucep.apps.core.models import Address
 
 
 @override_settings(STATICFILES_STORAGE="django.contrib.staticfiles.storage.StaticFilesStorage")
@@ -9,14 +9,7 @@ class TestRoutes(TestCase):
     def setUp(self):
         self.client = Client()
 
-        Addresses.objects.create(
-            cep="27185000",
-            addresses="Arrozal (Piraí)",
-            state="RJ",
-            # complement = "",
-            # neighborhood = "",
-            # city = "",
-        )
+        Address.objects.create(cep="27185000", addresses="Arrozal (Piraí)", state="RJ")
 
     def test_should_return_yaml_result(self):
 

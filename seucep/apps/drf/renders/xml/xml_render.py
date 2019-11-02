@@ -1,5 +1,4 @@
 from rest_framework.renderers import BaseRenderer
-from seucep.apps.drf.renders.xml.parser import dict2xml
 from seucep.apps.drf.renders.yaml.encode import SafeDumper
 
 
@@ -17,4 +16,17 @@ class XmlRenderer(BaseRenderer):
         Renders `data` into serialized XML.
         """
 
-        return dict2xml(data, root_node="Address")
+        xml = f"""
+            <?xml version="1.0" encoding="UTF-8"?>
+            <address>
+              <addresses>{data['addresses']}</addresses>
+              <state>{data['state']}</state>
+              <complement>{data['complement']}</complement>
+              <cep>{data['cep']}</cep>
+              <neighborhood>{data['neighborhood']}</neighborhood>
+              <city>{data['city']}</city>
+              <abbreviation>{data['abbreviation']}</abbreviation>
+              <address_type>{data['address_type']}</address_type>
+            </address>"""
+
+        return xml

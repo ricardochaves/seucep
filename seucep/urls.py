@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include
 from django.urls import path
+from django.views.generic import TemplateView
 from rest_framework import routers
 from seucep.apps.core import views
 from seucep.apps.drf.views import AddressBaseViewSet
@@ -28,4 +29,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("healthcheck/", include("health_check.urls")),
     path("api/v1/", include(router.urls)),
+    path("robots.txt", TemplateView.as_view(template_name="core/robots.txt", content_type="text/plain")),
 ]

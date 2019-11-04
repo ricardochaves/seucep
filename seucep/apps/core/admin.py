@@ -4,4 +4,4 @@ from seucep.apps.core.models import Address
 
 @admin.register(Address)
 class AddressesAdmin(admin.ModelAdmin):
-    pass
+    search_fields = ["cep", "bairro_nu_ini", "loc_nu"]

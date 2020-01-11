@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 python manage.py migrate
+python manage.py collectstatic --noinput
 
 if [[ ${DJANGO_BIND_ADDRESS+x} ]] && [[ ${DJANGO_BIND_PORT+x} ]];
 then

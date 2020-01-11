@@ -17,6 +17,7 @@ djangorestframework = "*"
 django-htmlmin = "*"
 pyyaml = "*"
 django-storages = "*"
+"django-storages[google]" = "*"
 
 ### Database driver
 psycopg2-binary = "*"

@@ -10,5 +10,5 @@ then
     python manage.py runserver ${DJANGO_BIND_ADDRESS}:${DJANGO_BIND_PORT}
 else
     echo "Using 0.0.0.0:8000 as parameter for Django runserver command"
-    python manage.py runserver 0.0.0.0:8000
+    python manage.py runserver 0.0.0.0:8080
 fi

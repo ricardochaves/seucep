@@ -36,8 +36,6 @@ else:
     ALLOWED_HOSTS = ["*"]
 
 
-# Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -46,8 +44,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "health_check",
-    "health_check.db",
-    # "health_check.storage",
+    # "health_check.db",
+    "health_check.storage",
     "seucep.apps.core",
     "seucep.apps.drf",
     "request_id_django_log",

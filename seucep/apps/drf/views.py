@@ -1,4 +1,3 @@
-from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
 from seucep.apps.core.models import Address
 from seucep.apps.drf.serializers import AddressSerializer
